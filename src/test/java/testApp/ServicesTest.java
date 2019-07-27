@@ -18,4 +18,17 @@ public class ServicesTest {
         assertEquals(excepted,actual);
     }
 
+    @Test
+    public void getPhoneByName(){
+        Services services = new Services();
+        services.addEntry("Ivan", 65535);
+        services.addEntry("John", 65565565);
+        services.addEntry("Seth", 6678535);
+
+        int actual = services.getNumberByName("Ivan");
+        int excepted  = 65535;
+        assertEquals(excepted,actual);
+
+    }
+
 }
